@@ -15,4 +15,5 @@
 
 $(function() {
   $('abbr.timeago').timeago();
+  $('input[type=text]:first').focus();
 });
