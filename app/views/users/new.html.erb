@@ -5,9 +5,9 @@
         <legend>Your new account</legend>
 
         <div class="control-group <%= 'error' if @user.errors[:nickname].present? %>">
-          <%= f.label :nickname, 'Username', :class => 'control-label' %>
+          <%= f.label :nickname, 'Username*', :class => 'control-label' %>
           <div class="controls">
-            <%= f.text_field :nickname, :class => 'text_field' %>
+            <%= f.text_field :nickname, :required => true, :class => 'text_field' %>
             <span class="help-inline"><%= @user.errors[:nickname].first %></span>
           </div>
         </div>
