@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
 
     unless @user.persisted?
       store_sensitive_user_data_in_session
-      render 'users/new', :status => 422
+      @user.errors.clear
+      render 'users/new'
     else
       self.current_user = @user
       redirect_back_or_to root_url, :notice => "Logged in!"
