@@ -17,6 +17,7 @@ gem 'girl_friday'
 gem 'thin'
 gem 'open4'
 gem 'redcarpet'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
