@@ -144,6 +144,10 @@ GEM
     omniauth (1.0.2)
       hashie (~> 1.2)
       rack
+    omniauth-browserid (0.0.1)
+      faraday
+      multi_json
+      omniauth (~> 1.0)
     omniauth-github (1.0.1)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
@@ -277,6 +281,7 @@ DEPENDENCIES
   kaminari
   libnotify
   omniauth
+  omniauth-browserid
   omniauth-github
   omniauth-twitter
   open4
