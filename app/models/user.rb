@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
     user.email      = auth["info"]["email"]
     user.nickname   = auth["info"]["nickname"]
     user.name       = auth["info"]["name"] unless user.provider == 'browser_id'
-    user.avatar_url = OauthHelper.get_avatar_url(auth)
+    user.avatar_url = OmniAuthHelper.get_avatar_url(auth)
     user.save
     user
   end

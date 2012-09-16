@@ -55,7 +55,7 @@ describe User do
       let(:avatar_url) { "http://foo.bar/avatar.jpg" }
 
       before do
-        OauthHelper.stub(:get_avatar_url).and_return(avatar_url)
+        OmniAuthHelper.stub(:get_avatar_url).and_return(avatar_url)
       end
 
       it "assigns avatar_url" do
