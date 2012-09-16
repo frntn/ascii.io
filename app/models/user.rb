@@ -24,8 +24,9 @@ class User < ActiveRecord::Base
     user = new
     user.provider   = auth["provider"]
     user.uid        = auth["uid"]
+    user.email      = auth["info"]["email"]
     user.nickname   = auth["info"]["nickname"]
-    user.name       = auth["info"]["name"]
+    user.name       = auth["info"]["name"] unless user.provider == 'browser_id'
     user.avatar_url = OauthHelper.get_avatar_url(auth)
     user.save
     user

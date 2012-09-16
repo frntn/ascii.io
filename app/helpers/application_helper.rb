@@ -17,6 +17,10 @@ module ApplicationHelper
     "/auth/github"
   end
 
+  def browser_id_auth_path
+    "/auth/browser_id"
+  end
+
   def markdown(&block)
     text = capture(&block)
     MKD_RENDERER.render(capture(&block)).html_safe
