@@ -3,8 +3,6 @@ function loginViaPersona() {
     if (assertion) {
       $('input[name=assertion]').val(assertion);
       $('#browser_id_form').submit();
-    } else {
-      window.location = "#{failure_path}"
     }
   });
 }
