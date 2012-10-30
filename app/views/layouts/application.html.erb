@@ -12,6 +12,7 @@
 
     <%= stylesheet_link_tag "application", :media => "all" %>
 
+    <%= javascript_include_tag "https://login.persona.org/include.js" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "player" %>
 
@@ -23,6 +24,7 @@
     <script>
       window.unpackWorkerPath = '<%= javascript_path "unpack_worker" %>';
       window.mainWorkerPath = '<%= javascript_path "main_worker" %>';
+      window.browserIdUser = <%= browser_id_user %>;
     </script>
 
     <%= content_for :head %>

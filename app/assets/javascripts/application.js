@@ -12,6 +12,7 @@
 //= require vendor/backbone-min
 //= require vendor/jquery.timeago
 //= require backbone/ascii_io
+//= require persona
 
 $(function() {
   $('abbr.timeago').timeago();

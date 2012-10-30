@@ -1,15 +1,10 @@
-<%= content_for :head do %>
-  <%= javascript_include_tag "https://login.persona.org/include.js" %>
-  <%= javascript_include_tag "persona" %>
-<% end -%>
-
 <section class="supplimental">
   <div class="wrapper">
     <h1>Log In</h1>
 
     <p>
       We recommend logging in with your email using <%= link_to "Mozilla Persona", "https://login.persona.org/" %>.
-      More details <%= link_to "here", "https://developer.mozilla.org/en-US/docs/Persona" %>.
+      Look <%= link_to "here", "https://developer.mozilla.org/en-US/docs/Persona" %> for more details.
     </p>
 
     <ul id="login">
@@ -24,10 +19,6 @@
       <li><%= link_to "Log in via Github", github_auth_path, :class => 'btn-auth btn-github' %></li>
       <li><%= link_to "Log in via Twitter", twitter_auth_path, :class => 'btn-auth btn-twitter' %></li>
     </ul>
-
-    <form id="browser_id_form" action="/auth/browser_id/callback">
-      <input type="hidden" name="assertion"/>
-    </form>
   </div>
 
   <div class="vertical-expander"></div>

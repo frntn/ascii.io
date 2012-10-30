@@ -21,6 +21,14 @@ module ApplicationHelper
     "/auth/browser_id"
   end
 
+  def browser_id_user
+    if current_user && current_user.provider == 'browser_id'
+      "'#{current_user.uid}'"
+    else
+      'null'
+    end
+  end
+
   def markdown(&block)
     text = capture(&block)
     MKD_RENDERER.render(capture(&block)).html_safe
